@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.header {
+  background-color: #3d3d3d;
+  padding: 8px 50px 8px 50px;
+  font-family: "montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.image-container {
+  background-image: url("../picture_resource/9.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative; /* Quan trọng để chữ đè lên */
+}
+
+/* Text overlay */
+.text-overlay {
+  position: absolute; /* Đặt chữ đè lên ảnh */
+  font-family: "montserrat";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa */
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6d6d6d;
+  transform: translateX(-100%);
+  transition: all 1s;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ddd;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-section {
+  float: left;
+}
+
+#image-section {
+  width: 40%;
+  margin-left: 100px;
+  margin-right: auto;
+  float: right;
+}
+
+#image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.content-section .title {
+  text-transform: uppercase;
+  font-family: "montserrat";
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.content-section .content p {
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content-section .content .button {
+  margin-top: 30px;
+  font-family: "montserrat";
+  font-weight: 200;
+}
+.content-section .content .button a {
+  background-color: #3d3d3d;
+  font-family: "montserrat";
+  padding: 12px 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.content-section .content .button a:hover {
+  background-color: #c2ae8b;
+  color: #fff;
+}
+
+.content-section .social {
+  margin-top: 40px;
+}
+
+.content-section .social i {
+  color: #c2ae8b;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.content-section .social i:hover {
+  color: #3d3d3d;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+  .content-section {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  #image-section {
+    float: none;
+    width: 100%;
+  }
+  #image-section img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .content-section .title {
+    text-align: center;
+    font-size: 19px;
+  }
+  .content-section .content .button {
+    text-align: center;
+  }
+  .content-section .content .button a {
+    padding: 9px 30px;
+  }
+  .content-section.social {
+    text-align: center;
+  }
+}

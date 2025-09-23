@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  font-family: "SOFIA", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 600ms;
+}
+
+.cards .card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards .green {
+  background-color: wheat;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.cards .gold {
+  background-color: blanchedalmond;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.cards .card p.box {
+  font-size: 0rem;
+  font-weight: 600;
+}
+
+.cards .card p.text {
+  font-size: 3.5rem;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
