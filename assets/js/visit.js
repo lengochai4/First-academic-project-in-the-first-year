@@ -20,21 +20,41 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlides();
   }
 
+  const dropdown = document.querySelector(".dropdown");
+  const dropbtn = document.querySelector(".dropbtn");
   const districtLinks = document.querySelectorAll(".district-link");
+
+  if (dropbtn && dropdown) {
+    dropbtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      dropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("open");
+      }
+    });
+  }
+
   districtLinks.forEach((link) => {
-    const handleSelect = (e) => {
-      if (e) e.preventDefault();
-      const targetId = link.getAttribute("data-target");
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("data-target");
       const targetSection = document.getElementById(targetId);
+
       document.querySelectorAll(".content-section").forEach((section) => {
         section.classList.remove("show");
       });
+
       if (targetSection) {
         targetSection.classList.add("show");
         targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    };
 
-    link.addEventListener("click", handleSelect);
+      if (dropdown) {
+        dropdown.classList.remove("open");
+      }
+    });
   });
 });
