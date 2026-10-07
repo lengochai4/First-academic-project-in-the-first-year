@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập Quản Trị - Web Du Lịch Sài Gòn</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/button.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png" />
+    <link rel="manifest" href="../assets/manifest.json" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">SAIGON TRAVEL</a>
+      <nav class="nav">
+        <a class="button" href="../index.html">HOME</a>
+        <a class="button" href="visit.html">VISIT</a>
+        <a class="button" href="nextstep.html">FOOD & BEVERAGE</a>
+        <a class="button" href="aboutus.html">ABOUT US</a>
+        <a class="button active btn-auth" href="login.html">LOGIN</a>
+      </nav>
+    </header>
+
+    <main class="auth-wrapper">
+      <div class="login-container">
+        <div class="login-card">
+          <span class="auth-badge">QUẢN TRỊ VIÊN</span>
+          <h1 class="auth-title">Đăng Nhập</h1>
+          <form id="loginForm">
+            <div class="input-group">
+              <input type="text" id="username" placeholder="Tên đăng nhập" required />
+            </div>
+            <div class="input-group">
+              <input type="password" id="password" placeholder="Mật khẩu" required />
+            </div>
+            <button type="submit" class="btn-login">Đăng nhập</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="post-container" id="postSection" style="display: none;">
+        <div class="post-card">
+          <span class="auth-badge">CMS ĐĂNG BÀI</span>
+          <h2 class="auth-title">Đăng Bài Viết Mới</h2>
+          <form id="postForm" enctype="multipart/form-data">
+            <div class="input-group">
+              <input type="text" id="title" placeholder="Tiêu đề bài viết" required />
+            </div>
+            <div class="input-group">
+              <textarea id="content" placeholder="Nội dung bài viết" rows="4" required></textarea>
+            </div>
+            <div class="input-group">
+              <input type="file" id="image" required />
+            </div>
+            <button type="submit" class="btn-submit">Đăng bài</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
